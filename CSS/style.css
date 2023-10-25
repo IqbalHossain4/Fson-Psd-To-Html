@@ -30,7 +30,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.container {
+.containers {
   max-width: 1220px;
   margin: 0 auto;
 }
@@ -89,6 +89,67 @@ header {
   left: -60px;
   transform: perspective(500px) rotateY(45deg);
 }
+
+/* Categories */
+.textMiddle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 16;
+  transform: translate(-50%, -50%);
+}
+
+.womenCategory::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.square {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 15;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+
+.square .squareTop {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.square .squareRight {
+  position: absolute;
+  right: 0;
+  width: 25px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.square .squareBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.square .squareLeft {
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
 /* =====Tablet Start responsive Here===== */
 @media screen and (max-width: 1024px) {
   .container {
@@ -106,11 +167,17 @@ header {
   h4 {
     font-size: 1.2rem;
   }
+  .square {
+    display: none;
+  }
 }
 
 /*=====Media query mobile version=====*/
 @media screen and (max-width: 576px) {
   .container {
     width: var(--container-width-sm);
+  }
+  .square {
+    display: none;
   }
 }
