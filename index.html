@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fson | Home</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="py-[12px] flex items-center justify-between px-[10px]">
+          <div class="text-[#bcbcbc] flex items-center gap-2 text-[12px]">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-google text-red-500"></i>
+            <i class="fa-solid fa-rss"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="flex items-center gap-5 text-[16px]">
+            <i class="fa-solid fa-user border-y-1 border-black"></i>
+            <div class="relative text-[16px]">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <div
+                class="absolute bg-[#e39531] text-white z-[100] w-[15px] h-[15px] top-[-5px] right-[-7px] rounded-[100%]"
+              >
+                <span class="flex items-center justify-center text-[10px]">
+                  05</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-[2px] bg-black"></div>
+      <!-- NavBer -->
+      <div class="container">
+        <nav class="bg-[#5e5e5e] p-4 overflow-hidden">
+          <div class="flex justify-between items-center">
+            <div
+              class="text-white text-2xl font-semibold flex items-center space-x-2"
+            >
+              <a href="#">
+                <img src="Images/logo.png" alt="Logo" class="h-8 w-8" />
+              </a>
+              <div class="relative w-[130px]">
+                <div class="flex items-start gap-[5px]">
+                  <h1 class="text-[50px] font-[700] text-white">F</h1>
+                  <h2 class="text-[25px] font-[600] text-white mt-[10px]">
+                    SON
+                  </h2>
+                </div>
+                <p
+                  class="absolute bottom-[-4%] left-[12%] text-[14px] font-400"
+                >
+                  shion website
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="hidden md:flex items-center gap-[10px] text-[14px] text-white"
+            >
+              <a href="#" class="hover:text-gray-200 active">Home</a>
+              <a href="#" class="hover:text-gray-200">CLOTHING</a>
+              <a href="#" class="hover:text-gray-200">BAG</a>
+              <a href="#" class="hover:text-gray-200">SHOES</a>
+              <a href="#" class="hover:text-gray-200">ACCESSORIES</a>
+              <a href="#" class="hover:text-gray-200">BLOG</a>
+              <a href="#" class="hover:text-gray-200">CONTACT</a>
+            </div>
+
+            <!-- Search Icon -->
+            <div class="hidden md:flex items-center space-x-2 relative">
+              <a href="#" class="text-white hover:text-gray-200" id="searchBtn">
+                <i class="fas fa-search"></i>
+              </a>
+              <div class="hidden relative" id="searchBar">
+                <div
+                  class="rounded-full bg-white text-gray-800 ps-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-400 overflow-hidden w-[300px] flex items-center justify-between"
+                >
+                  <input type="text" placeholder="Search..." />
+                  <button class="py-[40] px-[25px] bg-[#e39531] text-white">
+                    Search
+                  </button>
+                </div>
+                <button
+                  class="absolute top-0 right-[-5%] text-gray-500"
+                  id="closeSearch"
+                >
+                  <i class="fas fa-times text-red-600"></i>
+                </button>
+              </div>
+              <div
+                class="navLine absolute w-[20px] h-[110px] bg-[#3e3e3e]"
+              ></div>
+            </div>
+
+            <div class="md:hidden">
+              <button id="menuBtn" class="text-white">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden bg-[#5e5e5e] text-white py-2"
+        >
+          <a href="#" class="block px-4 py-2">Home</a>
+          <a href="#" class="block px-4 py-2">About</a>
+          <a href="#" class="block px-4 py-2">Services</a>
+          <a href="#" class="block px-4 py-2">Portfolio</a>
+          <a href="#" class="block px-4 py-2">Contact</a>
+          <a href="#" class="block px-4 py-2">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <script src="JS/script.js"></script>
+  </body>
+</html>
