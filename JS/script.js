@@ -1,3 +1,4 @@
+// NavBer Search Button
 const searchBtn = document.getElementById("searchBtn");
 const searchBar = document.getElementById("searchBar");
 const closeSearch = document.getElementById("closeSearch");
@@ -15,7 +16,6 @@ closeSearch.addEventListener("click", () => {
   navLine.classList.remove("hidden");
 });
 
-// Toggle the mobile menu
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
@@ -24,14 +24,11 @@ menuBtn.addEventListener("click", () => {
 });
 
 // Slider
-
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slide");
 const slideWidth = slides[0].offsetWidth;
-
 let currentIndex = 0;
 
-// Function to move the slider to the next set of slides
 function moveSlider(direction) {
   if (direction === "next") {
     currentIndex += 4;
@@ -48,9 +45,26 @@ function moveSlider(direction) {
   slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
-// Add event listeners for next and previous buttons
 const nextButton = document.getElementById("nextButton");
 const prevButton = document.getElementById("prevButton");
 
 nextButton.addEventListener("click", () => moveSlider("next"));
 prevButton.addEventListener("click", () => moveSlider("prev"));
+
+// Tab
+
+const tabButtons = document.querySelectorAll(".tab-button");
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    tabButtons.forEach((btn) => btn.classList.remove("actives"));
+    tabContents.forEach((content) => content.classList.remove("actives"));
+
+    const tabId = button.getAttribute("data-tab");
+    const correspondingContent = document.getElementById(tabId);
+
+    button.classList.add("actives");
+    correspondingContent.classList.add("actives");
+  });
+});
