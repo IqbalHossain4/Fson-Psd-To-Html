@@ -331,13 +331,24 @@ header {
 
 .ftrIcon {
   padding: 10px;
+  color: #e39531;
   border: 1px solid white;
   border-radius: 100%;
 }
 
+.fotrTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 20%;
+  height: 1px;
+  background-color: #e39531;
+}
+
 /* =====Tablet Start responsive Here===== */
 @media screen and (max-width: 1024px) {
-  .container {
+  .containers {
     width: var(--container-width-md);
   }
   h1 {
@@ -368,7 +379,7 @@ header {
 
 /*=====Media query mobile version=====*/
 @media screen and (max-width: 576px) {
-  .container {
+  .containers {
     width: var(--container-width-sm);
   }
   .square {
