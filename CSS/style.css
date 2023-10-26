@@ -70,6 +70,12 @@ img {
   gap: 25px;
 }
 
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
 .active {
   width: 100%;
   color: var(--color-bg2);
@@ -338,6 +344,9 @@ header {
   .slide {
     flex: 0 0 33.33%; /* Display 3 slides on tablets */
   }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /*=====Media query mobile version=====*/
@@ -352,6 +361,9 @@ header {
     flex: 0 0 50%; /* Display 2 slides on phones */
   }
   .grid-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid-3 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
